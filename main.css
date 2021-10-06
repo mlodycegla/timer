@@ -1,6 +1,7 @@
 body {
     margin: 0 auto;
     background-color: #333;
+    overflow: hidden;
 }
 
 .sitewrapper {
@@ -20,8 +21,8 @@ body {
 }
 
 .container {
-    width: 90%;
-    height: 80%;
+    width: 85%;
+    height: 50%;
     background-color: #222;
     display: flex;
     justify-content: center;
@@ -35,4 +36,53 @@ h1 {
 
 .controls {
     margin-left: 1%;
+}
+
+.btn {
+    width: 300px;
+    height: 75px;
+    background-color: black;
+    transition-duration: 0.5s;
+    color: white;
+    font-family: Cambria;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn2 {
+    width: 300px;
+    height: 75px;
+    background-color: black;
+    transition-duration: 0.5s;
+    color: white;
+    font-family: Cambria;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn3 {
+    width: 300px;
+    height: 75px;
+    background-color: black;
+    transition-duration: 0.5s;
+    color: white;
+    font-family: Cambria;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: green;
+    cursor: pointer;
+}
+
+.btn2:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.btn3:hover {
+    background-color: yellow;
+    cursor: pointer;
+    color: black;
 }

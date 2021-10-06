@@ -2,8 +2,14 @@ var sec = 0;
 var min = 0;
 var hour = 0;
 
+var executed = false;
+
 $('#start').click(function (e) { 
-timer = setInterval((timer) => {
+
+if(executed == false) {
+  timer = setInterval((timer) => {
+    
+    executed = true;
       $('#sec').empty();
       sec++
       if(sec<10) {
@@ -13,11 +19,15 @@ timer = setInterval((timer) => {
         $('#sec').empty();
         $('#sec').append(sec)
       }
-
     }, 1000);
+}
+
 });
 $('#stop').click(function (e) {
   clearInterval(timer);
+  console.log("godziny: " + hour + ", minuty: " + min + ", sekundy: " + sec);
+  alert("godziny: " + hour + ", minuty: " + min + ", sekundy: " + sec);
+  executed = false;
 });
 
 
@@ -30,6 +40,7 @@ $('#reset').click(function (e) {
   sec = 0;
   min = 0;
   hour = 0;
+  executed = false;
 });
 
 setInterval((timer) => {
